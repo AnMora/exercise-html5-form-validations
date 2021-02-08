@@ -172,7 +172,24 @@ window.addEventListener('load', function () {
         /*COMIENZO DE VALIDACION DE WeAcceptCard*/
         /*COMIENZO DE VALIDACION DE WeAcceptCard*/
         /*COMIENZO DE VALIDACION DE WeAcceptCard*/
-
+        
+        /*var RadioInput = document.querySelector("#RadioInput");
+        var selectedValue = parseInt(RadioInput.options[RadioInput.selectedIndex].value);*/
+        /*function test(radioObj){*/
+            if (document.Formulario.radio1.checked) {
+                var pRadioInput = document.querySelector('#pRadioInput span');
+                pRadioInput.innerHTML = "MasterCard";
+            }else if (document.Formulario.radio2.checked) {
+                var pRadioInput = document.querySelector('#pRadioInput span');
+                pRadioInput.innerHTML = "Visa";
+            }else if (document.Formulario.radio3.checked) {
+                var pRadioInput = document.querySelector('#pRadioInput span');
+                pRadioInput.innerHTML = "WesterUnion";
+            }else if (document.Formulario.radio4.checked)  {
+                var pRadioInput = document.querySelector('#pRadioInput span');
+                pRadioInput.innerHTML = "Elevated";
+            }
+        /*}*/
         /*VALIDACION DEL MENSAJE*/
         /*VALIDACION DEL MENSAJE*/
         /*VALIDACION DEL MENSAJE*/
