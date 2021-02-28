@@ -57,6 +57,7 @@ window.addEventListener('load', function () {
         } else {
             var pCard = document.querySelector('#pCard span');
             pCard.innerHTML = Card;
+            objMuestraError.style.display = "none";
         }
         /*COMIENZO DE VALIDACION DE CVC*/
         /*COMIENZO DE VALIDACION DE CVC*/
@@ -69,6 +70,7 @@ window.addEventListener('load', function () {
         } else {
             var pCVC = document.querySelector('#pCVC span');
             pCVC.innerHTML = CVC;
+            objMuestraError.style.display = "none";
         }
         /*COMIENZO DE VALIDACION DE AMOUNT(MONTO QUE SE PEDIRA SACAR)*/
         /*COMIENZO DE VALIDACION DE AMOUNT(MONTO QUE SE PEDIRA SACAR)*/
@@ -81,6 +83,7 @@ window.addEventListener('load', function () {
         } else {
             var pAmount = document.querySelector('#pAmount span');
             pAmount.innerHTML = Amount;
+            objMuestraError.style.display = "none";
         }
         /*VALIDACION DEL NOMBRE*/
         /*VALIDACION DEL NOMBRE*/
@@ -93,6 +96,7 @@ window.addEventListener('load', function () {
         } else {
             var pFirstName = document.querySelector('#pFirstName span');
             pFirstName.innerHTML = FirstName;
+            objMuestraError.style.display = "none";
         }
         /*VALIDACION DEL APELLIDO*/
         /*VALIDACION DEL APELLIDO*/
@@ -105,6 +109,7 @@ window.addEventListener('load', function () {
         } else {
             var pLastName = document.querySelector('#pLastName span');
             pLastName.innerHTML = LastName;
+            objMuestraError.style.display = "none";
         }
         /*VALIDACION DEL CIUDAD*/
         /*VALIDACION DEL CIUDAD*/
@@ -117,6 +122,7 @@ window.addEventListener('load', function () {
         } else {
             var pCity = document.querySelector('#pCity span');
             pCity.innerHTML = City;
+            objMuestraError.style.display = "none";
         }
         /*COMIENZO DE VALIDACION DE STATE*/
         /*COMIENZO DE VALIDACION DE STATE*/
@@ -168,28 +174,28 @@ window.addEventListener('load', function () {
         } else {
             var pPostalCode = document.querySelector('#pPostalCode span');
             pPostalCode.innerHTML = PostalCode;
+            objMuestraError.style.display = "none";
         }
         /*COMIENZO DE VALIDACION DE WeAcceptCard*/
         /*COMIENZO DE VALIDACION DE WeAcceptCard*/
         /*COMIENZO DE VALIDACION DE WeAcceptCard*/
-        
-        /*var RadioInput = document.querySelector("#RadioInput");
-        var selectedValue = parseInt(RadioInput.options[RadioInput.selectedIndex].value);*/
-        /*function test(radioObj){*/
-            if (document.Formulario.radio1.checked) {
-                var pRadioInput = document.querySelector('#pRadioInput span');
-                pRadioInput.innerHTML = "MasterCard";
-            }else if (document.Formulario.radio2.checked) {
-                var pRadioInput = document.querySelector('#pRadioInput span');
-                pRadioInput.innerHTML = "Visa";
-            }else if (document.Formulario.radio3.checked) {
-                var pRadioInput = document.querySelector('#pRadioInput span');
-                pRadioInput.innerHTML = "WesterUnion";
-            }else if (document.Formulario.radio4.checked)  {
-                var pRadioInput = document.querySelector('#pRadioInput span');
-                pRadioInput.innerHTML = "Elevated";
-            }
-        /*}*/
+        if (document.Formulario.radio1.checked) {
+            alert("MasterCard");
+            var pRadioInput = document.querySelector('#pRadioInput span');
+            pRadioInput.innerHTML = "MasterCard";
+        }else if (document.Formulario.radio2.checked) {
+            alert("Visa");
+            var pRadioInput = document.querySelector('#pRadioInput span');
+            pRadioInput.innerHTML = "Visa";
+        }else if (document.Formulario.radio3.checked) {
+            alert("WesterUnion");
+            var pRadioInput = document.querySelector('#pRadioInput span');
+            pRadioInput.innerHTML = "WesterUnion";
+        }else if (document.Formulario.radio4.checked)  {
+            alert("Elevated");
+            var pRadioInput = document.querySelector('#pRadioInput span');
+            pRadioInput.innerHTML = "Elevated";
+        }
         /*VALIDACION DEL MENSAJE*/
         /*VALIDACION DEL MENSAJE*/
         /*VALIDACION DEL MENSAJE*/
@@ -203,8 +209,9 @@ window.addEventListener('load', function () {
             pMessage.innerHTML = Message;
         }
 
-        console.log('Datos: ' + FirstName + ' ' + LastName);
+        /*console.log('Datos: ' + FirstName + ' ' + LastName);*/
 
         CajaMuestra.style.display = 'block';
     });
 });
+
